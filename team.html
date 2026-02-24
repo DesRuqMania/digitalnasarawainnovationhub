@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Nasarawa Innovation Hub - Meet Our Leadership Team">
+    <title>Our Team - Digital Nasarawa Innovation Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .team-hero {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1B5E20 0%, rgba(26, 94, 32, 0.9) 50%, #00897B 100%);
+            padding: 4rem 0;
+            color: #F5F5F0;
+            text-align: center;
+        }
+
+        .team-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 24rem;
+            height: 24rem;
+            background-color: #D4A574;
+            border-radius: 50%;
+            filter: blur(3rem);
+            opacity: 0.1;
+        }
+
+        .team-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 24rem;
+            height: 24rem;
+            background-color: #00897B;
+            border-radius: 50%;
+            filter: blur(3rem);
+            opacity: 0.1;
+        }
+
+        .team-hero .container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .team-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #F5F5F0;
+        }
+
+        .team-hero p {
+            font-size: 1.125rem;
+            max-width: 42rem;
+            margin: 0 auto;
+            color: rgba(245, 245, 240, 0.9);
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--foreground);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: var(--primary);
+        }
+
+        .team-members-section {
+            padding: 5rem 0;
+            background-color: var(--background);
+        }
+
+        .team-members-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            .team-members-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .team-member-card {
+            background-color: var(--card);
+            border: none;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 768px) {
+            .team-member-card {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .team-member-card:hover {
+            box-shadow: var(--shadow-xl);
+        }
+
+        .team-member-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #1B5E20 0%, #D4A574 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+        }
+
+        .team-member-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .team-member-content h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member-role {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-member-bio {
+            color: rgba(44, 44, 44, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .responsibilities {
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+
+        .responsibilities h3 {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .responsibilities-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .responsibility-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: rgba(44, 44, 44, 0.7);
+        }
+
+        .responsibility-item::before {
+            content: '•';
+            color: var(--accent);
+            font-weight: bold;
+            margin-top: 0.25rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: rgba(44, 44, 44, 0.7);
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+
+        .team-values {
+            padding: 5rem 0;
+            background-color: white;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .values-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .value-card {
+            background-color: var(--card);
+            border: none;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.125rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card p {
+            font-size: 0.875rem;
+            color: rgba(44, 44, 44, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container flex items-center justify-between">
+            <a href="index.html" class="back-button">← Back to Home</a>
+            <div class="nav-logo">
+                <div class="nav-logo-icon">D</div>
+                <span class="nav-logo-text">DNI Hub</span>
+            </div>
+            <div style="width: 100px;"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="team-hero">
+        <div class="container">
+            <h1>Our Leadership Team</h1>
+            <p>Meet the dedicated professionals driving innovation and excellence at the Digital Nasarawa Innovation Hub</p>
+        </div>
+    </section>
+
+    <!-- Team Members Section -->
+    <section class="team-members-section">
+        <div class="container">
+            <div class="team-members-grid">
+                <!-- Hub Founder -->
+                <div class="team-member-card">
+                    <div class="team-member-image">👨‍💼</div>
+                    <div class="team-member-content">
+                        <div>
+                            <h2>Hub Founder</h2>
+                            <div class="team-member-role">Visionary Leader & Founder</div>
+                            <p class="team-member-bio">The driving force behind the Digital Nasarawa Innovation Hub, bringing years of experience in digital transformation and entrepreneurship development. Committed to empowering the next generation of digital innovators.</p>
+                        </div>
+                        <div>
+                            <div class="responsibilities">
+                                <h3>Key Responsibilities</h3>
+                                <div class="responsibilities-list">
+                                    <div class="responsibility-item">Strategic vision and direction</div>
+                                    <div class="responsibility-item">Partnership development</div>
+                                    <div class="responsibility-item">Stakeholder engagement</div>
+                                    <div class="responsibility-item">Overall hub governance</div>
+                                    <div class="responsibility-item">Innovation strategy</div>
+                                </div>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <span>✉️</span>
+                                    <a href="mailto:dnihubs@gmail.com">dnihubs@gmail.com</a>
+                                </div>
+                                <div class="contact-item">
+                                    <span>📞</span>
+                                    <a href="tel:+2348069501129">+2348069501129</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hub Manager -->
+                <div class="team-member-card">
+                    <div class="team-member-image">👩‍💼</div>
+                    <div class="team-member-content">
+                        <div>
+                            <h2>Hub Manager</h2>
+                            <div class="team-member-role">Operations & Management</div>
+                            <p class="team-member-bio">Oversees all daily operations and ensures smooth execution of hub initiatives. Brings strong organizational and leadership skills to coordinate programs, manage resources, and maintain operational excellence.</p>
+                        </div>
+                        <div>
+                            <div class="responsibilities">
+                                <h3>Key Responsibilities</h3>
+                                <div class="responsibilities-list">
+                                    <div class="responsibility-item">Daily operations management</div>
+                                    <div class="responsibility-item">Resource allocation</div>
+                                    <div class="responsibility-item">Program coordination</div>
+                                    <div class="responsibility-item">Team supervision</div>
+                                    <div class="responsibility-item">Performance monitoring</div>
+                                    <div class="responsibility-item">Administrative oversight</div>
+                                </div>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <span>✉️</span>
+                                    <a href="mailto:dnihubs@gmail.com">dnihubs@gmail.com</a>
+                                </div>
+                                <div class="contact-item">
+                                    <span>📞</span>
+                                    <a href="tel:+2348069501129">+2348069501129</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Manager -->
+                <div class="team-member-card">
+                    <div class="team-member-image">🎓</div>
+                    <div class="team-member-content">
+                        <div>
+                            <h2>Training Manager</h2>
+                            <div class="team-member-role">Training & Capacity Building</div>
+                            <p class="team-member-bio">Designs and delivers comprehensive training programs in digital skills, entrepreneurship, and innovation. Passionate about creating engaging learning experiences that empower participants to achieve their goals.</p>
+                        </div>
+                        <div>
+                            <div class="responsibilities">
+                                <h3>Key Responsibilities</h3>
+                                <div class="responsibilities-list">
+                                    <div class="responsibility-item">Training program design</div>
+                                    <div class="responsibility-item">Curriculum development</div>
+                                    <div class="responsibility-item">Instructor coordination</div>
+                                    <div class="responsibility-item">Learning outcomes assessment</div>
+                                    <div class="responsibility-item">Participant feedback management</div>
+                                    <div class="responsibility-item">Skill development initiatives</div>
+                                </div>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <span>✉️</span>
+                                    <a href="mailto:dnihubs@gmail.com">dnihubs@gmail.com</a>
+                                </div>
+                                <div class="contact-item">
+                                    <span>📞</span>
+                                    <a href="tel:+2348069501129">+2348069501129</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Manager -->
+                <div class="team-member-card">
+                    <div class="team-member-image">📝</div>
+                    <div class="team-member-content">
+                        <div>
+                            <h2>Content Manager</h2>
+                            <div class="team-member-role">Content & Communications</div>
+                            <p class="team-member-bio">Creates engaging educational and promotional content across multiple platforms. Specializes in video production, social media strategy, and digital storytelling to amplify the hub's message and reach.</p>
+                        </div>
+                        <div>
+                            <div class="responsibilities">
+                                <h3>Key Responsibilities</h3>
+                                <div class="responsibilities-list">
+                                    <div class="responsibility-item">Content creation & strategy</div>
+                                    <div class="responsibility-item">Video production</div>
+                                    <div class="responsibility-item">Social media management</div>
+                                    <div class="responsibility-item">YouTube channel management</div>
+                                    <div class="responsibility-item">Marketing communications</div>
+                                    <div class="responsibility-item">Digital storytelling</div>
+                                </div>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <span>✉️</span>
+                                    <a href="mailto:dnihubs@gmail.com">dnihubs@gmail.com</a>
+                                </div>
+                                <div class="contact-item">
+                                    <span>📞</span>
+                                    <a href="tel:+2348069501129">+2348069501129</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Values Section -->
+    <section class="team-values">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Team Values</h2>
+                <p>Guided by shared principles that define our approach to innovation and excellence</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Excellence</h3>
+                    <p>Committed to delivering high-quality programs and services</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Collaboration</h3>
+                    <p>Working together to achieve shared goals and success</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">💡</div>
+                    <h3>Innovation</h3>
+                    <p>Embracing new ideas and forward-thinking solutions</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🌱</div>
+                    <h3>Growth</h3>
+                    <p>Fostering continuous learning and development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Join Our Team</h2>
+            <p>Are you passionate about digital innovation and youth empowerment? We're always looking for talented individuals to join our mission.</p>
+            <div class="cta-buttons">
+                <button class="btn-light">View Opportunities</button>
+                <a href="index.html" class="btn-outline">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="nav-logo" style="margin-bottom: 1rem;">
+                        <div class="nav-logo-icon">D</div>
+                        <span class="nav-logo-text">DNI Hub</span>
+                    </div>
+                    <p>Empowering digital innovation and entrepreneurship.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="https://www.youtube.com/@digitalnasarawainnovationh6282" target="_blank">YouTube</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p style="font-size: 0.875rem; color: rgba(245, 245, 240, 0.8);">
+                        Opposite Fire Service Lafia Nasarawa State, Nigeria<br>
+                        dnihubs@gmail.com<br>
+                        +2348069501129
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Digital Nasarawa Innovation Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
