@@ -94,7 +94,7 @@ All images are loaded from secure CDN URLs and will display correctly as long as
 ## 📞 Contact Information
 
 - **Address**: Opposite Fire Service Lafia Nasarawa State, Nigeria
-- **Email**: dnihubs@gmail.com
+- **Email**: digitalnasarawahub@gmail.com
 - **Phone**: +2348069501129
 - **YouTube**: https://www.youtube.com/@digitalnasarawainnovationh6282
 
@@ -134,7 +134,7 @@ Follow the existing pattern in `index.html` and add corresponding CSS classes in
 ## 🤝 Support
 
 For questions or issues, please contact:
-- Email: dnihubs@gmail.com
+- Email: digitalnasarawahub@gmail.com
 - Phone: +2348069501129
 
 ---
