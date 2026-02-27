@@ -7,6 +7,7 @@
     <title>Our Team - Digital Nasarawa Innovation Hub</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        /* Existing CSS remains unchanged */
         .team-hero {
             position: relative;
             overflow: hidden;
@@ -15,7 +16,6 @@
             color: #F5F5F0;
             text-align: center;
         }
-
         .team-hero::before {
             content: '';
             position: absolute;
@@ -28,7 +28,6 @@
             filter: blur(3rem);
             opacity: 0.1;
         }
-
         .team-hero::after {
             content: '';
             position: absolute;
@@ -41,25 +40,21 @@
             filter: blur(3rem);
             opacity: 0.1;
         }
-
         .team-hero .container {
             position: relative;
             z-index: 10;
         }
-
         .team-hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
             color: #F5F5F0;
         }
-
         .team-hero p {
             font-size: 1.125rem;
             max-width: 42rem;
             margin: 0 auto;
             color: rgba(245, 245, 240, 0.9);
         }
-
         .back-button {
             display: inline-flex;
             align-items: center;
@@ -69,28 +64,23 @@
             margin-bottom: 1rem;
             transition: color 0.3s ease;
         }
-
         .back-button:hover {
             color: var(--primary);
         }
-
         .team-members-section {
             padding: 5rem 0;
             background-color: var(--background);
         }
-
         .team-members-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 3rem;
         }
-
         @media (min-width: 1024px) {
             .team-members-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-
         .team-member-card {
             background-color: var(--card);
             border: none;
@@ -101,17 +91,14 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
-
         @media (max-width: 768px) {
             .team-member-card {
                 grid-template-columns: 1fr;
             }
         }
-
         .team-member-card:hover {
             box-shadow: var(--shadow-xl);
         }
-
         .team-member-image {
             width: 100%;
             aspect-ratio: 1;
@@ -121,48 +108,40 @@
             justify-content: center;
             font-size: 6rem;
         }
-
         .team-member-content {
             padding: 2rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-
         .team-member-content h2 {
             font-size: 1.5rem;
             color: var(--primary);
             margin-bottom: 0.5rem;
         }
-
         .team-member-role {
             color: var(--accent);
             font-weight: 600;
             margin-bottom: 1rem;
         }
-
         .team-member-bio {
             color: rgba(44, 44, 44, 0.8);
             margin-bottom: 1.5rem;
         }
-
         .responsibilities {
             border-top: 1px solid var(--border);
             padding-top: 1.5rem;
         }
-
         .responsibilities h3 {
             font-size: 1rem;
             color: var(--primary);
             margin-bottom: 1rem;
         }
-
         .responsibilities-list {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0.75rem;
         }
-
         .responsibility-item {
             display: flex;
             align-items: flex-start;
@@ -170,14 +149,12 @@
             font-size: 0.875rem;
             color: rgba(44, 44, 44, 0.7);
         }
-
         .responsibility-item::before {
             content: '•';
             color: var(--accent);
             font-weight: bold;
             margin-top: 0.25rem;
         }
-
         .contact-info {
             display: flex;
             flex-direction: column;
@@ -186,7 +163,6 @@
             border-top: 1px solid var(--border);
             padding-top: 1rem;
         }
-
         .contact-item {
             display: flex;
             align-items: center;
@@ -194,39 +170,32 @@
             font-size: 0.875rem;
             color: rgba(44, 44, 44, 0.7);
         }
-
         .contact-item a {
             color: var(--primary);
             text-decoration: none;
         }
-
         .contact-item a:hover {
             color: var(--accent);
         }
-
         .team-values {
             padding: 5rem 0;
             background-color: white;
         }
-
         .values-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 1.5rem;
         }
-
         @media (min-width: 768px) {
             .values-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-
         @media (min-width: 1024px) {
             .values-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
         }
-
         .value-card {
             background-color: var(--card);
             border: none;
@@ -236,22 +205,18 @@
             text-align: center;
             transition: all 0.3s ease;
         }
-
         .value-card:hover {
             box-shadow: var(--shadow-lg);
         }
-
         .value-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
-
         .value-card h3 {
             font-size: 1.125rem;
             color: var(--primary);
             margin-bottom: 0.5rem;
         }
-
         .value-card p {
             font-size: 0.875rem;
             color: rgba(44, 44, 44, 0.7);
@@ -356,44 +321,45 @@
                     </div>
                 </div>
 
-                 <!-- Developer Relations Manager -->
-<div class="team-member-card">
-    <div class="team-member-image">
-        <img src="https://desruqmania.github.io/digitalnasarawainnovationhub/images/hub-founder.jpeg"
-             alt="HUB Founder"
-             style="max-width:300px; height:auto;">
-    </div>
-    <div class="team-member-content">
-        <div>
-            <h2>Developer Relations Manager</h2>
-            <div class="team-member-role">Developer Engagement & Support</div>
-            <p class="team-member-bio">Builds and nurtures relationships with developers and tech communities. Leads initiatives to provide support, resources, and guidance, ensuring developers can effectively engage with DNI Hub’s platforms and tools.</p>
-        </div>
-        <div>
-            <div class="responsibilities">
-                <h3>Key Responsibilities</h3>
-                <div class="responsibilities-list">
-                    <div class="responsibility-item">Developer onboarding & support</div>
-                    <div class="responsibility-item">Community engagement</div>
-                    <div class="responsibility-item">Technical workshops & webinars</div>
-                    <div class="responsibility-item">Documentation & resource creation</div>
-                    <div class="responsibility-item">Feedback collection from developer community</div>
-                    <div class="responsibility-item">Collaboration with product teams</div>
+                <!-- Developer Relations Manager -->
+                <div class="team-member-card">
+                    <div class="team-member-image">
+                        <img src="https://desruqmania.github.io/digitalnasarawainnovationhub/images/hub-founder.jpeg"
+                             alt="HUB Founder"
+                             style="max-width:300px; height:auto;">
+                    </div>
+                    <div class="team-member-content">
+                        <div>
+                            <h2>Developer Relations Manager</h2>
+                            <div class="team-member-role">Developer Engagement & Support</div>
+                            <p class="team-member-bio">Builds and nurtures relationships with developers and tech communities. Leads initiatives to provide support, resources, and guidance, ensuring developers can effectively engage with DNI Hub’s platforms and tools.</p>
+                        </div>
+                        <div>
+                            <div class="responsibilities">
+                                <h3>Key Responsibilities</h3>
+                                <div class="responsibilities-list">
+                                    <div class="responsibility-item">Developer onboarding & support</div>
+                                    <div class="responsibility-item">Community engagement</div>
+                                    <div class="responsibility-item">Technical workshops & webinars</div>
+                                    <div class="responsibility-item">Documentation & resource creation</div>
+                                    <div class="responsibility-item">Feedback collection from developer community</div>
+                                    <div class="responsibility-item">Collaboration with product teams</div>
+                                </div>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <span>✉️</span>
+                                    <a href="mailto:devrelations@digitalnasarawahub.com">devrelations@digitalnasarawahub.com</a>
+                                </div>
+                                <div class="contact-item">
+                                    <span>📞</span>
+                                    <a href="tel:+2348012345678">+2348012345678</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span>✉️</span>
-                    <a href="mailto:devrelations@digitalnasarawahub.com">devrelations@digitalnasarawahub.com</a>
-                </div>
-                <div class="contact-item">
-                    <span>📞</span>
-                    <a href="tel:+2348012345678">+2348012345678</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
                 <!-- Training Manager -->
                 <div class="team-member-card">
                     <div class="team-member-image"><img src="https://desruqmania.github.io/digitalnasarawainnovationhub/images/WhatsApp%20Image%202026-01-20%20at%201.00.46%20PM.PNG"
@@ -467,6 +433,46 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Community Engagement Manager (NEW CARD) -->
+                <div class="team-member-card">
+                    <div class="team-member-image">
+                        <img src="https://desruqmania.github.io/digitalnasarawainnovationhub/images/dni-logo.jpeg"
+                             alt="Community Engagement Manager"
+                             style="max-width:300px; height:auto;">
+                    </div>
+                    <div class="team-member-content">
+                        <div>
+                            <h2>Community Engagement Manager</h2>
+                            <div class="team-member-role">Community & Partnerships</div>
+                            <p class="team-member-bio">Leads engagement with local tech communities, youth groups, and partner organizations. Works to build strong relationships, increase hub visibility, and coordinate community-driven initiatives that promote innovation and digital skills.</p>
+                        </div>
+                        <div>
+                            <div class="responsibilities">
+                                <h3>Key Responsibilities</h3>
+                                <div class="responsibilities-list">
+                                    <div class="responsibility-item">Community outreach and engagement</div>
+                                    <div class="responsibility-item">Partner relationship management</div>
+                                    <div class="responsibility-item">Organizing events and workshops</div>
+                                    <div class="responsibility-item">Promoting hub programs and opportunities</div>
+                                    <div class="responsibility-item">Collecting community feedback</div>
+                                    <div class="responsibility-item">Collaboration with internal teams</div>
+                                </div>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <span>✉️</span>
+                                    <a href="mailto:community@digitalnasarawahub.com">community@digitalnasarawahub.com</a>
+                                </div>
+                                <div class="contact-item">
+                                    <span>📞</span>
+                                    <a href="tel:+2348012345679">+2348012345679</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
