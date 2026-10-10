@@ -14,6 +14,26 @@
     <title>Digital Nasarawa Innovation Hub</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            flex-shrink: 0;
+            width: 100%;
+        }
+
         .hero-slideshow {
             position: relative;
             width: 100%;
@@ -91,6 +111,8 @@
             border-radius: 3px;
             user-select: none;
             z-index: 5;
+            border: none;
+            cursor: pointer;
         }
 
         .next {
@@ -128,6 +150,7 @@
         </div>
     </nav>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -422,8 +445,8 @@
             </div>
 
             <!-- Facebook Video Embed -->
-            <div style="display: flex; justify-content: center; margin-top: 2rem;">
-                <iframe src="https://www.facebook.com/plugins/video.php?height=317&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F28216645274652319%2F&show_text=false&width=560&t=0" width="560" height="[...]
+            <div style="display: flex; justify-content: center; margin-top: 2rem; margin-bottom: 2rem;">
+                <iframe src="https://www.facebook.com/plugins/video.php?height=317&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F28216645274652319%2F&show_text=false&width=560&t=0" width="560" height="317" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
     </section>
@@ -523,6 +546,9 @@
         </div>
     </div>
 </section>
+
+    </main>
+
     <!-- Footer -->
     <footer>
         <div class="container">
